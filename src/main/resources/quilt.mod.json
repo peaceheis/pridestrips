@@ -18,6 +18,7 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
+			"events": "io.github.peaceheis.pridestrips.PrideStrips",
 			"init": "io.github.peaceheis.pridestrips.PrideStrips"
 		},
 		"depends": [
@@ -34,5 +35,6 @@
 				"versions": ">=1.19"
 			}
 		]
-	}
+	},
+	"mixin": "pridestrips.mixin.json"
 }

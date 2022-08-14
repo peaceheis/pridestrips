@@ -64,23 +64,25 @@ public class PrideStrips implements SurfaceRuleEvents.OverworldModifierCallback,
 	public static final SurfaceRules.RuleSource FLAG_LESBIAN = ruleFromBlocks(RED, ORANGE, ORANGE_TWO, WHITE, PINK, PURPLE_TWO, MAGENTA);
 	public static final SurfaceRules.RuleSource FLAG_PAN = ruleFromBlocks(PINK, YELLOW, BLUE);
 	public static final SurfaceRules.RuleSource FLAG_DEMIRO = ruleFromBlocks(WHITE, WHITE, GREEN_TWO, GRAY, GRAY);
+	public static final SurfaceRules.RuleSource FLAG_AROACE = ruleFromBlocks(ORANGE, YELLOW, WHITE, LIGHT_BLUE, BLUE);
 	public static final SurfaceRules.RuleSource FLAG_PRIDE = ruleFromBlocks(RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE);
 
 	@Override
-	public void modifyOverworldRules(SurfaceRuleContext.@NotNull Overworld context) {
+	public void modifyOverworldRules(@NotNull SurfaceRuleContext.Overworld context) {
 		context.materialRules().add(0,
 				SurfaceRules.sequence(
 						SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.BIRCH_FOREST, Biomes.OLD_GROWTH_BIRCH_FOREST), FLAG_TRANS),
 						SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.SUNFLOWER_PLAINS, Biomes.LUSH_CAVES), FLAG_ACE),
 						SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.OLD_GROWTH_PINE_TAIGA, Biomes.OLD_GROWTH_SPRUCE_TAIGA, Biomes.TAIGA), FLAG_NB),
-						SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.DESERT, Biomes.DARK_FOREST), FLAG_BI),
-						SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.JUNGLE, Biomes.SPARSE_JUNGLE), FLAG_AGENDER),
+						SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.DESERT, Biomes.DARK_FOREST, Biomes.DEEP_OCEAN), FLAG_BI),
+						SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.JUNGLE, Biomes.SPARSE_JUNGLE, Biomes.BAMBOO_JUNGLE), FLAG_AGENDER),
 						SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.BADLANDS, Biomes.WOODED_BADLANDS, Biomes.ERODED_BADLANDS), FLAG_ARO),
 						SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.SAVANNA, Biomes.SAVANNA_PLATEAU, Biomes.WINDSWEPT_SAVANNA), FLAG_GENDERFLUID),
 						SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.MEADOW, Biomes.GROVE), FLAG_PLURAL),
 						SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.FROZEN_PEAKS, Biomes.JAGGED_PEAKS, Biomes.SNOWY_SLOPES), FLAG_LESBIAN),
 						SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.DRIPSTONE_CAVES, Biomes.WARM_OCEAN, Biomes.DEEP_LUKEWARM_OCEAN, Biomes.LUKEWARM_OCEAN), FLAG_PAN),
 						SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.COLD_OCEAN, Biomes.DEEP_COLD_OCEAN, Biomes.DEEP_FROZEN_OCEAN, Biomes.FROZEN_RIVER), FLAG_DEMIRO),
+						SurfaceRules.ifTrue(SurfaceRules.isBiome(Biomes.FLOWER_FOREST, Biomes.WINDSWEPT_HILLS, Biomes.WINDSWEPT_GRAVELLY_HILLS), FLAG_AROACE),
 						FLAG_PRIDE
 				)
 		);

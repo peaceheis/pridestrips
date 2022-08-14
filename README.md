@@ -1,7 +1,7 @@
 ## pridestrips
 
 Have you ever thought to yourself, *the overworld just doesn't have enough pride flag*?
-Well you're now in luck! This mod adds two strips of colored blocks forming pride flags across the overworld. Currently the mod adds 12 flags, attached to certain biomes:
+Well you're now in luck! This mod adds two strips of colored blocks forming pride flags across the overworld. Currently the mod adds 13 flags, attached to certain biomes:
 
 - Trans Flag: Birch Forest, Old Growth Birch Forest:
 - Ace Flag: Sunflower Plains, Lush Caves

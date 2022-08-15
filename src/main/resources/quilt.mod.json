@@ -14,7 +14,8 @@
 				"issues": "https://github.com/peaceheis/pridestrips/issues",
 				"sources": "https://github.com/peaceheis/pridestrips"
 			},
-			"icon": "assets/example_mod/icon.png"
+			"icon": "assets/io/github/peaceheis/pridestrips/icon.png",
+			"license": "MIT"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
